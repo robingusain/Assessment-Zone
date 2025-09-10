@@ -2,7 +2,7 @@
 
 A single platform for both recruiters and students.  
 
-## 🚀 Features
+## Features
 
 ### For Recruiters/HR
 - Create online assessments (like HackerEarth).
@@ -19,7 +19,7 @@ A single platform for both recruiters and students.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Collaborative Code Editor**: Monaco Editor + Socket.io, Judge0 API
 - **Video Call + Chat**: WebRTC, Socket.io (or Twilio/Daily.co)
@@ -30,5 +30,5 @@ A single platform for both recruiters and students.
 
 ---
 
-## 📂 Project Structure (Planned)
+## Project Structure (Planned)
 
