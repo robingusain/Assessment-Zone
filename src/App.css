@@ -1,11 +1,18 @@
-.homePageWrapper{
+.CodeMirror {
+  height: 100% !important;
+  /* width: 100%; */
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.homePageWrapper {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
 }
-.formWrapper{
+.formWrapper {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 30px;
   border-radius: 10px;
@@ -15,7 +22,7 @@
   text-align: center;
 }
 
-.homepagelogo{
+.homepagelogo {
   width: 100px;
   height: 100px;
 }
@@ -29,28 +36,27 @@
   color: #61dafb;
 } */
 
-
-.inputgroup{
+.inputgroup {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
   gap: 15px;
 }
 
-.mainLabel{
+.mainLabel {
   margin-top: 0px;
 }
 
-.inputbox{
+.inputbox {
   padding: 10px;
-  border-radius: 5px; 
+  border-radius: 5px;
   border: none;
   font-size: 16px;
   background: #eee;
   font-weight: bold;
 }
 
-.btn{
+.btn {
   border: none;
   padding: 10px;
   border-radius: 5px;
@@ -59,94 +65,406 @@
   font-weight: bold;
 }
 
-.joinbtn{
-  background-color: #1E90FF;
+.joinbtn {
+  background-color: #1e90ff;
   color: white;
   width: 100px;
 }
 
-.joinbtn:hover{
+.joinbtn:hover {
   background-color: #026cd5;
 }
 
-.createNewBtn{
+.createNewBtn {
   text-decoration: none;
   color: #61dafb;
 }
 
-.createNewBtn:hover{
+.createNewBtn:hover {
   color: #026cd5;
   border-bottom: 1px solid #026cd5;
 }
 
-.mainWrap{
+.mainWrap {
   display: grid;
   grid-template-columns: 230px 1fr;
   height: 100vh;
 }
 
-.aside{
+.aside {
   background-color: #000f24d7;
-  padding:16px;
+  padding: 16px;
   color: #fff;
   display: flex;
   flex-direction: column;
 }
 
-.asideInner{
+.asideInner {
   flex: 1;
 }
 
-.clientsList{
+.clientsList {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.client{
+.client {
   display: flex;
   align-items: center;
   flex-direction: column;
   font-weight: bold;
 }
 
-.userName{
+.userName {
   margin-top: 10px;
 }
 
-.logo{
-  border-bottom: 1px solid #424242;
+.logo {
+  margin-left: 50px;
+  /* border-bottom: 1px solid #424242; */
   padding-bottom: 10px;
 }
 
-.logoImage{
+.separator{
+  border-bottom: 1px solid #424242;
+}
+
+.logoImage {
   height: 80px;
 }
 
-.copyBtn{
+.copyBtn {
   background-color: #0683ffcc;
   color: #fff;
+  transition: 0.15s ease-in-out;
 }
 
-.copyBtn:hover{
+.copyBtn:hover {
   background-color: #005bb5;
+  transform: translateY(-1px);
 }
 
-.leaveBtn{
+.leaveBtn {
   margin-top: 20px;
-  background-color: rgb(202, 6, 6); 
+  background-color: rgb(202, 6, 6);
   color: #fff;
+  transition: 0.15s ease-in-out;
 }
 
-.leaveBtn:hover{
+.leaveBtn:hover {
   background-color: darkred;
+  transform: translateY(-1px);
 }
 
-.codemirror{
+.codemirror {
   /* min-height: calc(100vh-20px); */
   /* min-height: 100vh; */
   font-size: 20px;
   line-height: 1.6;
   padding-top: 20px;
+}
+
+
+/* Main wrapper makes all child elements equal width */
+.editor-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  gap: 5px; 
+}
+
+/* Ensure CodeMirror matches width */
+#realtimeEditor,
+.CodeMirror {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Ensure IO box width matches */
+.io-box {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  font-family: monospace;
+  font-size: 15px;
+  color: #e5e7eb;
+  background-color: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  border-radius: 6px;
+  resize: vertical;
+  outline: none;
+  margin-bottom: 10px;
+}
+.io-box:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.4);
+}
+/* Ensure terminal matches width */
+.terminalbox {
+  /* width: 100%;
+  max-width: 100%;
+  box-sizing: border-box; */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 15px;
+  color: #e5e7eb;
+  background-color: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 10px;
+}
+.xterm-viewport:focus{
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.4);
+}
+.CodeMirror {
+  width: 100% !important;
+}
+
+
+
+
+
+/* GPT */
+/* Global Themes */
+body[data-theme="dark"] {
+  background: #0d0d0d;
+  color: #e5e7eb;
+}
+
+body[data-theme="light"] {
+  background: #f5f5f5;
+  color: #1f2937;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 0;
+  z-index: 15;
+}
+
+.sticky-toolbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: inherit;
+  padding: 8px 0;
+}
+
+/* Buttons */
+.toolbar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #2e2e2e;
+  background: #1f1f1f;
+  color: #e5e7eb;
+  transition: 0.15s ease;
+}
+
+.toolbar-btn:hover {
+  transform: translateY(-1px);
+}
+
+.select{
+  margin-left: 3px;
+}
+
+.icon {
+  height: 16px;
+  width: 16px;
+}
+
+/* Button Colors */
+.run {
+  background: #16a34a;
+  border-color: #15803d;
+}
+.run:hover {
+  background: #138038;
+}
+
+.clear {
+  background: #dc2626;
+  border-color: #b91c1c;
+}
+.clear:hover {
+  background: #b91c1c;
+}
+
+.theme {
+  background: #334155;
+  border-color: #1e293b;
+}
+.theme:hover {
+  background: #475569;
+}
+
+body[data-theme="light"] .theme {
+  background: #c4c496;
+  color: black;
+  border-color: #e1e1e1;
+}
+
+body[data-theme="light"] .theme:hover {
+  background: #aeae82;
+}
+
+body[data-theme="light"] .select {
+  background-color: whitesmoke;
+  color: #1f2937;
+}
+
+/* Editor Sizing */
+.CodeMirror {
+  height: 55vh !important;
+  border: 1px solid #2d2d2d;
+  border-radius: 8px;
+}
+
+body[data-theme="light"] .CodeMirror {
+  border-color: #cbd5e1;
+}
+
+.io-box {
+  height: 14vh;
+}
+
+.terminalbox {
+  height: 10vh;
+}
+
+
+
+
+
+/* STICKY sidebar */
+
+/* Make the entire left aside sticky */
+.aside {
+  position: -webkit-sticky;  /* Safari iOS < 13 */
+  position: sticky;
+  top: 0;
+  height: 97vh;             /* Full screen height */
+  overflow-y: auto;          /* Allow scroll inside the aside if content exceeds */
+  background-color: #000f24d7;
+  padding: 16px;
+  color: #fff;
+}
+
+/* Ensure the inner content fills remaining space cleanly */
+.asideInner {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Remove scroll from mainWrap so only editor scrolls */
+.mainWrap {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Editor panel should scroll independently */
+.editorWrap {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+
+
+
+/* Collapse Button */
+.collapseBtn {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 200;
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.collapseBtn:hover {
+  background: #334155;
+}
+
+/* Sidebar Default */
+.aside {
+  width: 195px;
+  transition: width 0.25s ease;
+}
+
+/* When collapsed */
+body.sidebar-collapsed .aside {
+  width: 25px;
+}
+
+
+/* Default state: visible */
+.aside h3,
+.clientsList,
+.copyBtn,
+.leaveBtn {
+  transition: opacity 0.2s ease, transform 0.25s ease;
+}
+
+/* Collapsed state: fade out + slide up */
+body.sidebar-collapsed .aside h3,
+body.sidebar-collapsed .clientsList,
+body.sidebar-collapsed .copyBtn,
+body.sidebar-collapsed .leaveBtn,
+body.sidebar-collapsed .separator {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none; 
+}
+
+
+
+
+/* Logo scales nicely */
+.aside .logoImage {
+  transition: 0.2s ease;
+}
+
+body.sidebar-collapsed .logoImage {
+  height: 45px;
+}
+
+/* Adjust main grid */
+.mainWrap {
+  /* grid-template-columns: 230px 1fr; */
+  transition: grid-template-columns 0.25s ease;
+}
+
+body.sidebar-collapsed .mainWrap {
+  grid-template-columns: 60px 1fr;
+}
+
+/* Editor must expand smoothly */
+.editorWrap {
+  width: 100%;
+  transition: width 0.25s ease;
 }
